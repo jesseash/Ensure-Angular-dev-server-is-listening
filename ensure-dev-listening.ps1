@@ -10,7 +10,7 @@ param(
   [switch]$AutoDetectPort
 )
 
-# Option A (safe mode):
+
 # - If something else is listening on $Port, report that it's listening and show the owning PID/process.
 # - Do NOT kill or take the port from foreign processes.
 # - Only start the dev server when the port is not listening. When we start the server, wait for it to bind
@@ -387,3 +387,4 @@ try {
     try { Kill-ProcessTree $global:childPid } catch { }
   }
 }
+
